@@ -1,11 +1,3 @@
-# config-dev.yml
-spring:
-  profiles: dev
-
-server:
-  port: 8081
-
-config:
-  info: "这是开发环境的配置信息，来自 GitHub"
-  version: "1.0.0-dev"
-  age: 25
+info: "这是开发环境的配置信息，来自 GitHub"
+version: "1.0.0-dev"
+age: 25

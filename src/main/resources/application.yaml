@@ -3,22 +3,28 @@ server:
 
 spring:
   application:
-    name: spring-cloud-config
+    name: cloud-config-center
   cloud:
     config:
       server:
         git:
-          # Git仓库地址
           uri: https://github.com/lql534/springcloud-config.git
-          default-label: master
+          # 删除 search-paths 或改为 /
+          search-paths: /
           skip-ssl-validation: true
-          # 仓库子目录（如果配置文件在子目录中）
-          search-paths: springcloud-config
-          # Git仓库用户名
+          default-label: master
           username: lql
-          # Git仓库密码
           password: lql050304
-          # 克隆超时时间（秒）
           timeout: 10
-          # 强制拉取
           force-pull: true
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
