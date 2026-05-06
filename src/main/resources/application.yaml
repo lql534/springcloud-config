@@ -1,3 +1,24 @@
+server:
+  port: 3344
+
 spring:
   application:
-    name: config
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          # Git仓库地址
+          uri: https://github.com/lql534/springcloud-config.git
+          default-label: master
+          skip-ssl-validation: true
+          # 仓库子目录（如果配置文件在子目录中）
+          search-paths: springcloud-config
+          # Git仓库用户名
+          username: lql
+          # Git仓库密码
+          password: lql050304
+          # 克隆超时时间（秒）
+          timeout: 10
+          # 强制拉取
+          force-pull: true
