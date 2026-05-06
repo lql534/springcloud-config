@@ -1,0 +1,11 @@
+# config-test.yml
+spring:
+  profiles: test
+
+server:
+  port: 8082
+
+config:
+  info: "这是测试环境的配置信息，来自 GitHub"
+  version: "1.0.0-test"
+  age: 30

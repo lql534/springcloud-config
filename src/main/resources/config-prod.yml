@@ -1,0 +1,11 @@
+# config-prod.yml
+spring:
+  profiles: prod
+
+server:
+  port: 8083
+
+config:
+  info: "这是生产环境的配置信息，来自 GitHub"
+  version: "1.0.0-prod"
+  age: 35
